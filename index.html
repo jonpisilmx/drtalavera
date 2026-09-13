@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Contenido 30 Días | Dr. Tonatiuh Talavera</title>
+    <style>
+        :root {
+            --bg-main: #F4F1EA;
+            --bg-card: #FFFFFF;
+            --text-primary: #1A2E26;
+            --text-secondary: #4A5568;
+            --accent-orange: #D95D39;
+            --accent-dark: #1A2E26;
+            --border-color: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--bg-card);
+            padding: 50px 40px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border-top: 6px solid var(--accent-orange);
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-orange);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-bottom: 24px;
+        }
+
+        .meta-pills {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            background-color: #F8FAFC;
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .formats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .format-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .format-card-header {
+            margin-bottom: 14px;
+        }
+
+        .format-type {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent-orange);
+            letter-spacing: 1px;
+        }
+
+        .format-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 4px;
+        }
+
+        .format-body p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .btn-example {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--accent-dark);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-example:hover {
+            background-color: var(--accent-orange);
+        }
+
+        .grid-section {
+            background: var(--accent-dark);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+
+        .grid-section h2 {
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: #FFFFFF;
+        }
+
+        .grid-section p {
+            color: #CBD5E1;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .grid-post {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .grid-post .tag {
+            font-size: 11px;
+            font-weight: bold;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+        }
+
+        .grid-post .title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .grid-post .pillar {
+            font-size: 12px;
+            color: #94A3B8;
+        }
+
+        .calendar-section {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+        }
+
+        .month-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin-top: 24px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .day-header {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            padding: 8px 0;
+            background: #F8FAFC;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        .calendar-day {
+            background: #FAFAFA;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            min-height: 120px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .calendar-day.empty {
+            background: transparent;
+            border: none;
+        }
+
+        .calendar-day.active-post {
+            background: #FFFFFF;
+            border: 2px solid var(--accent-orange);
+            box-shadow: 0 4px 12px rgba(217, 93, 57, 0.12);
+        }
+
+        .day-number {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-dark);
+        }
+
+        .post-tag {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        .post-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 4px 0;
+            line-height: 1.25;
+        }
+
+        .post-cta {
+            font-size: 10px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* HIGH-PRIORITY STRATEGIC DISCLAIMER SECTION */
+        .disclaimer-section {
+            background: var(--accent-dark);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            border-left: 8px solid var(--accent-orange);
+            box-shadow: 0 8px 25px rgba(26, 46, 38, 0.15);
+        }
+
+        .disclaimer-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .disclaimer-badge {
+            background: var(--accent-orange);
+            color: #FFFFFF;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 1.5px;
+        }
+
+        .disclaimer-section h3 {
+            font-size: 22px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        .disclaimer-body p {
+            font-size: 15px;
+            color: #E2E8F0;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .disclaimer-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: var(--accent-orange);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 40px;
+            border-radius: 16px;
+        }
+
+        footer h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 900px) {
+            .calendar-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .day-header, .calendar-day.empty {
+                display: none;
+            }
+            .calendar-day {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <span class="badge">Estrategia &amp; Plan Editorial</span>
+        <h1>Dr. Tonatiuh Talavera</h1>
+        <p class="hero-subtitle">Catálogo de formatos y calendario mensual adaptado a los procedimientos quirúrgicos clave del Dr. Talavera (Lipoescultura, Senos, Remodelación Costal).</p>
+        <div class="meta-pills">
+            <span class="pill">Cliente: @dr.tonatiuhtalavera</span>
+            <span class="pill">Publicaciones: 9 Reels / Posts</span>
+            <span class="pill">Días: Martes y Jueves</span>
+        </div>
+    </header>
+
+    <h2 class="section-title">1. Formatos de Contenido Seleccionados</h2>
+    <p class="section-desc">Haga clic en el botón de cada tarjeta para ver la referencia real en Instagram:</p>
+
+    <div class="formats-grid">
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Conexión &amp; Empatía</span>
+                <div class="format-name">Reflexión Pasiva</div>
+            </div>
+            <div class="format-body">
+                <p>Texto narrativo introspectivo sobre imágenes cinemáticas. Genera conexión emocional.</p>
+                <a href="https://www.instagram.com/reel/Db_Wt4sQRdc/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Autoridad &amp; Aprendizaje</span>
+                <div class="format-name">Talking Head</div>
+            </div>
+            <div class="format-body">
+                <p>Explicación médica directa a cámara. Comunica seguridad y dinamismo.</p>
+                <a href="https://www.instagram.com/reel/DcvwT2LRhvp/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Educación &amp; Estética</span>
+                <div class="format-name">Talking Head (Voz en Off)</div>
+            </div>
+            <div class="format-body">
+                <p>Tapas visuales del cirujano con narración guiada en voz en off y subtítulos.</p>
+                <a href="https://www.instagram.com/reel/DTeUOOVjcHH/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Agilidad &amp; Retención</span>
+                <div class="format-name">Rapid-Fire Q&amp;A</div>
+            </div>
+            <div class="format-body">
+                <p>Respuestas ultrarrápidas a preguntas frecuentes en menos de 60 segundos.</p>
+                <a href="https://www.instagram.com/reel/DcwMM8Ruini/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Posicionamiento &amp; Criterio</span>
+                <div class="format-name">Reacción Green Screen</div>
+            </div>
+            <div class="format-body">
+                <p>Análisis y crítica experta de mitos y tendencias desmitificando desde postura médica.</p>
+                <a href="https://www.instagram.com/reel/DTwIe2xDRdv/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Humor &amp; Comunidad</span>
+                <div class="format-name">Microficción / Sketch</div>
+            </div>
+            <div class="format-body">
+                <p>Humor situacional inteligente sobre situaciones cotidianas médico-paciente.</p>
+                <a href="https://www.instagram.com/reel/DTbnm17DbJG/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Humanización</span>
+                <div class="format-name">Recap Cinematográfico</div>
+            </div>
+            <div class="format-body">
+                <p>Recopilación del día a día, backstage de cirugías o eventos médicos.</p>
+                <a href="https://www.instagram.com/reel/DS818WbDa3V/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Conversión Directa</span>
+                <div class="format-name">Before &amp; After</div>
+            </div>
+            <div class="format-body">
+                <p>Muestra de resultados quirúrgicos exitosos enfocados en generar consultas.</p>
+                <a href="https://www.instagram.com/reel/Dan5aH0xkFA/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+        <div class="format-card">
+            <div class="format-card-header">
+                <span class="format-type">Certidumbre &amp; Social Proof</span>
+                <div class="format-name">Screenshots de Opiniones</div>
+            </div>
+            <div class="format-body">
+                <p>Capturas de pantalla de comentarios positivos y testimonios de pacientes satisfechos.</p>
+                <a href="https://www.instagram.com/reel/DawgKe7NDQY/" target="_blank" class="btn-example">Ver Ejemplo en Instagram &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-section">
+        <h2>2. Estrategia de Distribución en el Grid</h2>
+        <p>Estructura modular en 3 columnas para mantener armonía estética al navegar por el perfil:</p>
+        
+        <div class="instagram-grid">
+            <div class="grid-post">
+                <span class="tag">Columna 1 (Izquierda)</span>
+                <div class="title">Reflexión / Recap</div>
+                <div class="pillar">Conexión Humana &amp; Estética Cinematográfica</div>
+            </div>
+            <div class="grid-post">
+                <span class="tag">Columna 2 (Centro)</span>
+                <div class="title">Talking Head / Q&amp;A</div>
+                <div class="pillar">Autoridad Médica &amp; Criterio Científico</div>
+            </div>
+            <div class="grid-post">
+                <span class="tag">Columna 3 (Derecha)</span>
+                <div class="title">Before &amp; After / Reseñas</div>
+                <div class="pillar">Conversión &amp; Generación de Consultas</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="calendar-section">
+        <h2 class="section-title">3. Calendario Tradicional de Publicaciones</h2>
+        <p class="section-desc">Secuencia temática de 9 publicaciones programadas los días <strong>Martes</strong> y <strong>Jueves</strong>:</p>
+
+        <div class="month-title">Septiembre</div>
+        <div class="calendar-grid">
+            <div class="day-header">Lun</div>
+            <div class="day-header">Mar</div>
+            <div class="day-header">Mié</div>
+            <div class="day-header">Jue</div>
+            <div class="day-header">Vie</div>
+            <div class="day-header">Sáb</div>
+            <div class="day-header">Dom</div>
+
+            <div class="calendar-day"><span class="day-number">21</span></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">22 (Pub 1)</span>
+                <span class="post-tag">Reflexión Pasiva</span>
+                <div class="post-title">Lo que nadie te dice antes de cambiar tu contorno corporal.</div>
+                <div class="post-cta">CTA: Guarda este reel.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">23</span></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">24 (Pub 2)</span>
+                <span class="post-tag">Talking Head</span>
+                <div class="post-title">¿Candidata a Lipoescultura o Lipotransferencia? 3 criterios.</div>
+                <div class="post-cta">CTA: Comenta 'VALORACIÓN'.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">25</span></div>
+            <div class="calendar-day"><span class="day-number">26</span></div>
+            <div class="calendar-day"><span class="day-number">27</span></div>
+
+            <div class="calendar-day"><span class="day-number">28</span></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">29 (Pub 3)</span>
+                <span class="post-tag">Before &amp; After</span>
+                <div class="post-title">Evolución de contorno corporal: Semana 2 vs. Mes 6.</div>
+                <div class="post-cta">CTA: Cita por DM.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">30</span></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+        </div>
+
+        <div class="month-title">Octubre</div>
+        <div class="calendar-grid">
+            <div class="day-header">Lun</div>
+            <div class="day-header">Mar</div>
+            <div class="day-header">Mié</div>
+            <div class="day-header">Jue</div>
+            <div class="day-header">Vie</div>
+            <div class="day-header">Sáb</div>
+            <div class="day-header">Dom</div>
+
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">01 (Pub 4)</span>
+                <span class="post-tag">Rapid-Fire Q&amp;A</span>
+                <div class="post-title">5 dudas de prótesis mamarias y lactancia en 60s.</div>
+                <div class="post-cta">CTA: Deja tu pregunta.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">02</span></div>
+            <div class="calendar-day"><span class="day-number">03</span></div>
+            <div class="calendar-day"><span class="day-number">04</span></div>
+
+            <div class="calendar-day"><span class="day-number">05</span></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">06 (Pub 5)</span>
+                <span class="post-tag">Screenshots Reseñas</span>
+                <div class="post-title">Mensaje real de paciente a los 3 meses de Remodelación Costal.</div>
+                <div class="post-cta">CTA: Link en Bio.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">07</span></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">08 (Pub 6)</span>
+                <span class="post-tag">Reacción Green Screen</span>
+                <div class="post-title">Desmintiendo fajas mágicas vs. Lipoescultura real.</div>
+                <div class="post-cta">CTA: Comparte el vídeo.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">09</span></div>
+            <div class="calendar-day"><span class="day-number">10</span></div>
+            <div class="calendar-day"><span class="day-number">11</span></div>
+
+            <div class="calendar-day"><span class="day-number">12</span></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">13 (Pub 7)</span>
+                <span class="post-tag">Talking Head Voz Off</span>
+                <div class="post-title">Bioseguridad en quirófano durante un Levantamiento de Senos.</div>
+                <div class="post-cta">CTA: Escríbenos por DM.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">14</span></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">15 (Pub 8)</span>
+                <span class="post-tag">Microficción / Humor</span>
+                <div class="post-title">"Mi amiga me dijo que ya podía hacer ejercicio en la semana 2".</div>
+                <div class="post-cta">CTA: Etiqueta a tu amiga.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">16</span></div>
+            <div class="calendar-day"><span class="day-number">17</span></div>
+            <div class="calendar-day"><span class="day-number">18</span></div>
+
+            <div class="calendar-day"><span class="day-number">19</span></div>
+            <div class="calendar-day active-post">
+                <span class="day-number">20 (Pub 9)</span>
+                <span class="post-tag">Recap Cinematográfico</span>
+                <div class="post-title">Un día con el Dr. Talavera: De marcas prequirúrgicas a consulta.</div>
+                <div class="post-cta">CTA: Reserva valoración.</div>
+            </div>
+            <div class="calendar-day"><span class="day-number">21</span></div>
+            <div class="calendar-day"><span class="day-number">22</span></div>
+            <div class="calendar-day"><span class="day-number">23</span></div>
+            <div class="calendar-day"><span class="day-number">24</span></div>
+            <div class="calendar-day"><span class="day-number">25</span></div>
+        </div>
+    </div>
+
+    <!-- NOTA ESTRATÉGICA CON ALTA JERARQUÍA VISUAL -->
+    <div class="disclaimer-section">
+        <div class="disclaimer-header">
+            <span class="disclaimer-badge">Nota Estratégica Clave</span>
+            <h3>Personalización de Guiones &amp; Adaptación a Tendencias</h3>
+        </div>
+        <div class="disclaimer-body">
+            <p><strong>1. Alineación a Objetivos Comerciales:</strong> Si bien esta propuesta presenta una estructura sólida basada en los formatos principales, la redacción final de cada guion se realizará una vez que el <strong>Dr. Tonatiuh Talavera</strong> defina la estrategia comercial mensual y determine los servicios o procedimientos específicos que desea impulsar prioritariamente durante el periodo.</p>
+            <p><strong>2. Producción Basada en Tendencias Vigentes:</strong> Cada uno de los contenidos propuestos se desarrollará adaptando las tendencias actuales de Instagram (audios virales, estructuras de edición de alto impacto, hooks visuales y dinamismo en pantalla). Esto garantiza una cuenta relevante, atractiva y alineada con los hábitos de consumo de la audiencia actual.</p>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Propuesta Lista para Presentación</h2>
+        <p>Estrategia integral diseñada para aprobación del Dr. Tonatiuh Talavera.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
